@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raising Fighting Spirit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Raising Fighting Spirit</h1>
+    <p>Jogo em C++ desenvolvido para aplicar na prática os conceitos fundamentais da Programação Orientada a Objetos.</p> </header>
+
+  <main>
+
+    <section id="sobre">
+      <h2>Sobre o Projeto</h2>
+      <p>O <b>Raising Fighting Spirit</b> é um projeto acadêmico desenvolvido em <b>C++</b>, que tem como objetivo demonstrar a aplicação prática dos conceitos de <b>Programação Orientada a Objetos (POO)</b> por meio de um jogo interativo em ambiente de terminal.  
+No jogo, o jogador cria um personagem, que pode enfrentar uma variedade de inimigos de diferentes tipos e níveis de poder, através de um sistema de combate com múltiplas ações que leva em conta as individualidades do personagem construido.
+
+A estrutura do código foi planejada com base em princípios sólidos de design de software, sendo dividida em módulos independentes e organizados em classes, como <b>Game</b>, <b>Events</b>, <b>Interface</b> e <b>SpiritGenerator</b>. Essa arquitetura modular permite um desenvolvimento mais limpo, reutilizável e de fácil manutenção.
+
+Durante o desenvolvimento, foram explorados os principais pilares da POO — <b>abstração, encapsulamento, herança e polimorfismo</b> — aplicados à criação de personagens, manipulação de eventos e gerenciamento da lógica de jogo.  
+O projeto também destaca o trabalho em equipe, com cada integrante responsável por partes específicas, como lógica do jogo, sistema de eventos, interface e documentação.
+</p>
+        
+</p>
+      </p>
+    </section>
+
+    <section id="arquitetura">
+      <h2>Estrutura e Arquitetura</h2>
+      <p>Explicação geral da organização do código e dos módulos.</p>
+      <ul>
+        <li><b>main.cpp</b> — ponto de entrada do programa</li>
+        <li><b>Game.cpp / Game.h</b> — encapsula todo o funcionamento da seção do jogo.</li>
+        <li><b>Events.cpp / Events.h</b> — sistema de eventos e respostas</li>
+        <li><b>Interface.cpp</b> — exibição e interação via terminal</li>
+        <li><b>Database</b> — exibição e interação via terminalconfigura o banco de dados e disponibiliza um cliente para as operações CRUD das tabelas existentes.</li>
+
+      </ul>
+      <p>Diagrama da estrutura:</p>
+      <img src="imagens/Diagrama de Classes.jpg" alt="Diagrama de classes">
+    </section>
+
+    <section id="poo">
+      <h2>Conceitos de POO Aplicados</h2>
+      <ul>
+        <li><b>Encapsulamento:</b> os atributos de uma classe separam bem o que esse conceito possui, o que pode ser acessado externamente (públicos) e o que são atributos de acesso interno (privados). Foi utilizado em diversas classes por meio de getters, setters e métodos privados.</li>
+        <li><b>Herança:</b> uma classe específica pode herdar comportamentos de uma classe mais geral. Embora não tenha sido utilizada, a arquitetura implementada permite, por exemplo, que uma interface seja um contrato do qual uma classe InterfaceGráfica herdaria seus comportamentos principais, alterando a UX, mas mantendo o contrato entre Eventos e Interfaces.</li>
+        <li><b>Polimorfismo:</b> uma mesma classe pode herdar comportamentos distintos. Não houve necessidade de uso desse conceito no projeto.</li>
+        <li><b>Abstração:</b> uma classe representa apenas os atributos relevantes para a aplicação, sem se confundir com o conceito na vida real.
+Exemplo: Spirit possui alguns atributos relevantes para o combate, mas o ente fictício (espírito combatente) teria diversos outros comportamentos e detalhes se existisse de fato.</li>
+      </ul>
+    </section>
+
+<section id="execucao">
+  <h2>Como Executar</h2>
+  <p>
+    Para compilar e executar o projeto <b>Raising Fighting Spirit</b>, é necessário ter um compilador C++ instalado, 
+    como o <b>g++</b> (Linux) ou o <b>MinGW</b> (Windows).  
+    O jogo é executado diretamente no terminal, sem necessidade de interface gráfica. Você também precisa de um Docker funcionando para poder rodar o programa.
+  </p>
+
+  <p>Compile todos os arquivos-fonte com o seguinte comando:</p>
+  <pre><code>
+  docker-compose up --build
+  </code></pre>
+
+  <p>Após a compilação bem-sucedida, execute o programa, o que deve ser feito em um console diferente (ex: no vscode, abra um segundo console):</p>
+  <pre><code>
+docker-compose run --rm app
+  </code></pre>
+</section>
+
+    <section id="equipe">
+      <h2>Equipe</h2>
+      <ul>
+        <li><b>Aldus Daniel Ferreira de Souza Monteiro:</b>  Arquitetura de módulos, configuração de containers, criação do banco de dados, implementação da navegação (menus), lógica de eventos e mecânicas específicas do jogo.</li>
+        <li><b>Igor de Azevedo Soares:</b> Desenvolvimento do sistema de criação de personagens, desenvolvimento do sistema de luta, design das mecânicas de batalha, escrita do relatório, texto para o site, gravação do vídeo e criação do diagrama de classes.</li>
+        <li><b>Matheus Noleto de Sampaio Gominho Rosa:</b> Desenvolvimento do sistema de criação de personagens, desenvolvimento do sistema de luta, design das mecânicas de batalha, escrita do relatório, texto para o site, gravação do vídeo e criação do diagrama de classes.</li>
+        <li><b>Reilson Batista da Fonseca:</b>Desenvolvimento de features negociais, escrita do relatório e desenvolvimento do site desenvolvedor de features negociais, escrita do relatório, desenvolvimento do site.</li>
+      </ul>
+    </section>
+
+    <section id="links">
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://github.com/AldusD/raising-fighting-spirit" target="_blank">Repositório no GitHub</a></li>
+        <li><a href="https://www.youtube.com/watch?v=6OztiE1FIjQ" target="_blank">Video do Youtube</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Raising Fighting Spirit — Projeto acadêmico em C++</p>
+  </footer>
+
+</body>
+</html>
